@@ -21,7 +21,7 @@
 					)
 			&lt;/cfquery&gt;
 			
-			&lt;cfset arguments.<xsl:value-of select="//bean/@name"/>.setid(myPK.GENERATED_KEY) /&gt;
+			&lt;cfset arguments.<xsl:value-of select="//bean/@name"/>.setid(myPK.IDENTITYCOL) /&gt;
 			&lt;cfset r.data = arguments.<xsl:value-of select="//bean/@name"/>.getMemento() /&gt;
 
 			&lt;cfcatch type="database"&gt;
