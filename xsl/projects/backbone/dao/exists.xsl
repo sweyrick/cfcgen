@@ -1,7 +1,6 @@
 	&lt;cffunction name="exists" access="public" output="false" returntype="boolean"&gt;
 		&lt;cfargument name="<xsl:value-of select="//bean/@name"/>" type="<xsl:value-of select="//bean/@path"/>" required="true" /&gt;
 
-		&lt;cfset var qExists = ""&gt;
 		&lt;cfquery name="qExists" datasource="#variables.dsn#" maxrows="1"&gt;
 			SELECT count(1) as idexists
 			FROM	<xsl:value-of select="//dbtable/@name" />
