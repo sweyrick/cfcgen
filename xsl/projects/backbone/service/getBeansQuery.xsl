@@ -1,5 +1,5 @@
 	&lt;cffunction name="read" access="remote" output="false" returnformat="JSON"&gt;
-		&lt;cfargument name="model" type="string" required="true" /&gt;
+		&lt;cfargument name="model" type="string" required="true" default="{}" /&gt;
 		&lt;cfset var r = getResponse() /&gt;
 		&lt;cfset var l = {} /&gt;
 		&lt;cfif r.success&gt;
