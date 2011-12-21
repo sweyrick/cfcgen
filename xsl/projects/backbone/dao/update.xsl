@@ -1,4 +1,4 @@
-	&lt;cffunction name="update" access="public" output="false" returntype="struct"&gt;
+	&lt;cffunction name="update" access="public" output="false" hint="Update existing <xsl:value-of select="//bean/@name"/> object in database." returntype="struct"&gt;
 		&lt;cfargument name="<xsl:value-of select="//bean/@name"/>" type="<xsl:value-of select="//bean/@path"/>" required="true" /&gt;
 
 		&lt;cfquery name="qUpdate" datasource="#variables.dsn#" result="myPK"&gt;

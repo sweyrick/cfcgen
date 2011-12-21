@@ -1,4 +1,4 @@
-	&lt;cffunction name="read" access="public" output="false" returntype="struct"&gt;
+	&lt;cffunction name="read" access="public" output="false" hint="Select query that returns <xsl:value-of select="//bean/@name"/> objects." returntype="struct"&gt;
 		&lt;cfargument name="<xsl:value-of select="//bean/@name"/>" type="<xsl:value-of select="//bean/@path"/>" required="true" /&gt;
 
 		&lt;cfset var ret = 0/&gt;

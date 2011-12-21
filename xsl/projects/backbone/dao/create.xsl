@@ -1,4 +1,4 @@
-	&lt;cffunction name="create" access="public" output="false" returntype="struct"&gt;
+	&lt;cffunction name="create" access="public" hint="Insert new <xsl:value-of select="//bean/@name"/> object into database." output="false" returntype="struct"&gt;
 		&lt;cfargument name="<xsl:value-of select="//bean/@name"/>" type="<xsl:value-of select="//bean/@path"/>" required="true" /&gt;
 
 		&lt;cfquery name="qCreate" datasource="#variables.dsn#" result="myPK"&gt;

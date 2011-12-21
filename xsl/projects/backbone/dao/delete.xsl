@@ -1,4 +1,4 @@
-	&lt;cffunction name="delete" access="public" output="false" returntype="boolean"&gt;
+	&lt;cffunction name="delete" hint="Delete <xsl:value-of select="//bean/@name"/> row from database." access="public" output="false" returntype="boolean"&gt;
 		&lt;cfargument name="<xsl:value-of select="//bean/@name"/>" type="<xsl:value-of select="//bean/@path"/>" required="true" /&gt;
 
 		&lt;cfquery name="qDelete" datasource="#variables.dsn#"&gt;

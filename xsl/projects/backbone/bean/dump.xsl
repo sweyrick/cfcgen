@@ -1,7 +1,7 @@
 	&lt;!---
 	DUMP
 	---&gt;
-	&lt;cffunction name="dump" access="public" output="true" return="void"&gt;
+	&lt;cffunction name="dump" hint="CFDump <xsl:value-of select="//bean/@name"/> for debugging." access="public" output="true" return="void"&gt;
 		&lt;cfargument name="abort" type="boolean" default="false" /&gt;
 		&lt;cfdump var="#variables.instance#" /&gt;
 		&lt;cfif arguments.abort&gt;

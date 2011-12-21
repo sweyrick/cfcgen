@@ -1,4 +1,4 @@
-	&lt;cffunction name="validate" access="public" returntype="array" output="false"&gt;
+	&lt;cffunction name="validate" access="public" returntype="array" hint="Validate <xsl:value-of select="//bean/@name"/> arguments. Returns error structure if validation catches error." output="false"&gt;
 		&lt;cfset var errors = arrayNew(1) /&gt;
 		&lt;cfset var thisError = structNew() /&gt;
 		<xsl:for-each select="root/bean/dbtable/column">

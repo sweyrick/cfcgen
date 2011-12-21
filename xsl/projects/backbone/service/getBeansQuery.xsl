@@ -1,5 +1,5 @@
-	&lt;cffunction name="read" access="remote" output="false" returnformat="JSON"&gt;
-		&lt;cfargument name="model" type="string" required="true" default="{}" /&gt;
+	&lt;cffunction name="read" access="remote" output="false" hint="Returns <xsl:value-of select="//bean/@name"/> JSON objects based on JSON structure arguments." returnformat="JSON"&gt;
+		&lt;cfargument name="model" type="string" required="true" default="{}" hint="JSON model from front end." /&gt;
 		&lt;cfset var r = getResponse() /&gt;
 		&lt;cfset var l = {} /&gt;
 		&lt;cfif r.success&gt;

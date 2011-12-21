@@ -1,5 +1,5 @@
-	&lt;cffunction name="update" access="remote" output="false" returnformat="JSON"&gt;
-		&lt;cfargument name="model" type="string" required="true" /&gt;
+	&lt;cffunction name="update" hint="Update <xsl:value-of select="//bean/@name"/> JSON object" access="remote" output="false" returnformat="JSON"&gt;
+		&lt;cfargument name="model" type="string" required="true" hint="JSON model from front end." /&gt;
 		&lt;cfset var r = getResponse() /&gt;
 		&lt;cfset var l = {} /&gt;
 		&lt;cfif r.success&gt;

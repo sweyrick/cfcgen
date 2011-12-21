@@ -1,4 +1,4 @@
-	&lt;cffunction name="get" access="public" output="false" returntype="array"&gt;
+	&lt;cffunction name="get" access="public" output="false" hint="Select query that is dynamic based on the <xsl:value-of select="//bean/@name"/> properties received." returntype="array"&gt;
 		<xsl:for-each select="root/bean/dbtable/column">&lt;cfargument name="<xsl:value-of select="@name" />" type="<xsl:value-of select="@type" />" required="false" /&gt;
 		</xsl:for-each>&lt;cfargument name="orderby" type="string" required="false" /&gt;
 		
