@@ -19,7 +19,7 @@
 			<xsl:for-each select="root/bean/dbtable/column[@primaryKey='Yes']">RETURNING <xsl:value-of select="@name" /> AS id;</xsl:for-each>
 		&lt;/cfquery&gt;
 		
-		<xsl:for-each select="root/bean/dbtable/column[@primaryKey='Yes']">&lt;cfset arguments.<xsl:value-of select="//bean/@name"/>.set<xsl:value-of select="@name" />(myPK.id) /&gt;</xsl:for-each>
+		<xsl:for-each select="root/bean/dbtable/column[@primaryKey='Yes']">&lt;cfset arguments.<xsl:value-of select="//bean/@name"/>.set<xsl:value-of select="@name" />(qCreate.id) /&gt;</xsl:for-each>
 		
 		&lt;cfset ret = arguments.<xsl:value-of select="//bean/@name"/>.getMemento() /&gt;
 
