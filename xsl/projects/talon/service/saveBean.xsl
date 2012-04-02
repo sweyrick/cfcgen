@@ -6,5 +6,5 @@
 		&lt;cfset l.<xsl:value-of select="//bean/@name"/>DAO = application.<xsl:value-of select="//bean/@name"/>DAO /&gt;
 		&lt;cfset l.<xsl:value-of select="//bean/@name"/>.init(argumentCollection=deserializejson(arguments.model))/&gt;
 		&lt;cfset r['data'] = l.<xsl:value-of select="//bean/@name"/>DAO.create(l.<xsl:value-of select="//bean/@name"/>) /&gt;
-		&lt;cfreturn r /&gt;
+		&lt;cfreturn r.data /&gt;
 	&lt;/cffunction&gt;
