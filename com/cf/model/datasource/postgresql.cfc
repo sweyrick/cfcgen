@@ -61,10 +61,10 @@
 			</cfcase>
 
 			<!--- bit / bool --->
-			<cfcase value="bit">
+			<cfcase value="bit,boolean">
 				<cfreturn "cf_sql_bit" />
 			</cfcase>
-			<cfcase value="bool,boolean">
+			<cfcase value="bool">
 				<cfreturn "cf_sql_varchar" />
 			</cfcase>
 
@@ -98,10 +98,10 @@
 			</cfcase>
 
 			<!--- strings --->
-			<cfcase value="char,character">
+			<cfcase value="char">
 				<cfreturn "cf_sql_char" />
 			</cfcase>
-			<cfcase value="varchar,character varying">
+			<cfcase value="varchar,character varying,character">
 				<cfreturn "cf_sql_varchar" />
 			</cfcase>
 			<cfcase value="text">
@@ -145,7 +145,7 @@
 		<cfquery name="qTable" datasource="#variables.dsn#">
 			SELECT COLUMN_NAME
 				,CASE
-					WHEN IS_NULLABLE = 'Yes' AND COLUMN_DEFAULT IS NULL THEN 'true'
+					WHEN upper(is_nullable) = 'YES' AND COLUMN_DEFAULT IS NULL THEN 'true'
 					ELSE 'false'
 				END AS nullable
 				,DATA_TYPE AS type_name
