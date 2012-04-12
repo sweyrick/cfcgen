@@ -17,6 +17,11 @@
 		<include file="save.xsl" />
 		<include file="queryRowToStruct.xsl" />
 	</dao>
+	<daoex fileNameAppend="DAO_EX" filetype="cfc">
+		<include file="create.xsl" />
+		<include file="occurs.xsl" />
+		<include file="getByAttributes.xsl" />
+	</daoex>
 	<service filetype="cfc">
 		<include file="getBeansQuery.xsl" />
 		<include file="saveBean.xsl" />
