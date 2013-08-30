@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- yet another config -->
+<generator>
+	<bean fileNameAppend="" fileType="cfc">
+	</bean>
+	<dao fileNameAppend="DAO" filetype="cfc">
+		<include file="create.xsl" />
+		<include file="read.xsl" />
+		<include file="update.xsl" />
+		<include file="delete.xsl" />
+		<include file="exists.xsl" />
+		<include file="save.xsl" />
+		<include file="getByAttributesQuery.xsl" />
+		<include file="getByStructs.xsl" />
+		<include file="getByAttributes.xsl" />
+		<include file="queryRowToStruct.xsl" />
+	</dao>
+	<service filetype="cfc">
+		<include file="createBean.xsl" />
+		<include file="getBean.xsl" />
+		<include file="getBeans.xsl" />
+		<include file="getStructs.xsl" />
+		<include file="saveBean.xsl" />
+		<include file="deleteBean.xsl" />
+	</service>
+</generator>
