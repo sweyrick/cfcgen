@@ -24,7 +24,7 @@
 				row = arguments[2];
 			//loop over the cols and build the struct from the query row
 			for(ii = 1; ii lte arraylen(cols); ii = ii + 1){
-				stReturn[cols[ii]] = qry[cols[ii]][row];
+				stReturn[lcase(cols[ii])] = qry[cols[ii]][row];
 			}		
 			//return the struct
 			return stReturn;

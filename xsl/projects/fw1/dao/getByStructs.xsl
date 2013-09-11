@@ -7,7 +7,7 @@
 		&lt;cfset var i = 0 /&gt;
 		&lt;cfset var tmpstr = structNew() /&gt;
 		&lt;cfloop from="1" to="#qList.recordCount#" index="i"&gt;
-			&lt;cfset tmpstr = queryRowToStruct(arguments.qList,i) /&gt;
+			&lt;cfset tmpstr = queryRowToStruct(qList,i) /&gt;
 			&lt;cfset arrayAppend(arrStructs,tmpstr) /&gt;
 		&lt;/cfloop&gt;
 				
