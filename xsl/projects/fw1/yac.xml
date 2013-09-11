@@ -2,6 +2,8 @@
 <!-- yet another config -->
 <generator>
 	<bean fileNameAppend="" fileType="cfc">
+		<include file="getMemento.xsl" />
+		<include file="setMemento.xsl" />
 	</bean>
 	<dao fileNameAppend="DAO" filetype="cfc">
 		<include file="create.xsl" />
@@ -23,4 +25,7 @@
 		<include file="saveBean.xsl" />
 		<include file="deleteBean.xsl" />
 	</service>
+	<validate fileNameAppend="_validator" filetype="cfc">
+		<include file="validate.xsl" />
+	</validate>
 </generator>
